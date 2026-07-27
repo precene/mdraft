@@ -1,0 +1,123 @@
+.markdown-preview {
+  color: #dbeafe;
+  line-height: 1.75;
+}
+
+.markdown-preview > * + * {
+  margin-top: 1rem;
+}
+
+.markdown-preview h1,
+.markdown-preview h2,
+.markdown-preview h3,
+.markdown-preview h4 {
+  color: #f8fafc;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.markdown-preview h1 {
+  font-size: 2.25rem;
+  margin-top: 0;
+}
+
+.markdown-preview h2 {
+  border-bottom: 1px solid #1e293b;
+  font-size: 1.6rem;
+  padding-bottom: 0.45rem;
+}
+
+.markdown-preview h3 {
+  font-size: 1.25rem;
+}
+
+.markdown-preview p,
+.markdown-preview li {
+  color: #cbd5e1;
+}
+
+.markdown-preview a {
+  color: #67e8f9;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.markdown-preview ul,
+.markdown-preview ol {
+  padding-left: 1.45rem;
+}
+
+.markdown-preview ul {
+  list-style: disc;
+}
+
+.markdown-preview ol {
+  list-style: decimal;
+}
+
+.markdown-preview blockquote {
+  border-left: 3px solid #22d3ee;
+  color: #cbd5e1;
+  padding-left: 1rem;
+}
+
+.markdown-preview code {
+  background: #0f172a;
+  border: 1px solid #1e293b;
+  border-radius: 0.3rem;
+  color: #e0f2fe;
+  font-family:
+    "JetBrains Mono", "Fira Code", Consolas, "Liberation Mono", monospace;
+  font-size: 0.9em;
+  padding: 0.15rem 0.35rem;
+}
+
+.markdown-preview pre {
+  background: #0f172a;
+  border: 1px solid #1e293b;
+  border-radius: 0.5rem;
+  overflow: auto;
+  padding: 1rem;
+}
+
+.markdown-preview pre code {
+  background: transparent;
+  border: 0;
+  color: #dbeafe;
+  padding: 0;
+}
+
+.markdown-preview table {
+  border-collapse: collapse;
+  display: block;
+  overflow-x: auto;
+  width: 100%;
+}
+
+.markdown-preview th,
+.markdown-preview td {
+  border: 1px solid #334155;
+  padding: 0.55rem 0.7rem;
+}
+
+.markdown-preview th {
+  background: #0f172a;
+  color: #f8fafc;
+  text-align: left;
+}
+
+.markdown-preview hr {
+  border: 0;
+  border-top: 1px solid #1e293b;
+  margin: 1.5rem 0;
+}
+
+.markdown-preview img {
+  border-radius: 0.5rem;
+  max-width: 100%;
+}
+
+.markdown-preview input[type="checkbox"] {
+  accent-color: #22d3ee;
+  margin-right: 0.45rem;
+}
