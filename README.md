@@ -1,4 +1,4 @@
-# Mdraft - Free Markdown Editor
+# Mdraft - Markdown Editor and Live Preview
 
 A free, easy-to-use web application that allows users to write, preview, and save Markdown files. Create notes, drafts, documentation, and formatted Markdown content with a focused dark-mode editor and live preview.
 
