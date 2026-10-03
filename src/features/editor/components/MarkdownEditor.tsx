@@ -1,7 +1,7 @@
 import CodeMirror from "@uiw/react-codemirror";
 import { markdown } from "@codemirror/lang-markdown";
 
-import type { MarkdownEditorView } from "../types";
+import type { MarkdownEditorView } from "../types/editor.types";
 
 type MarkdownEditorProps = {
   content: string;

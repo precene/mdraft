@@ -1,3 +1,12 @@
+export const MAX_MARKDOWN_FILE_BYTES = 2 * 1024 * 1024;
+
+export class MarkdownFileError extends Error {
+  constructor(message: string) {
+    super(message);
+    this.name = "MarkdownFileError";
+  }
+}
+
 export function downloadTextFile(
   content: string,
   fileName: string,
@@ -16,7 +25,7 @@ export function downloadTextFile(
 
 export function normalizeMarkdownFileName(fileName: string) {
   const trimmed = fileName.trim() || "untitled";
-  return trimmed.replace(/\.(md|markdown)$/i, "");
+  return trimmed.replace(/\.(md|markdown|txt)$/i, "");
 }
 
 export function createMarkdownDownloadName(fileName: string) {
@@ -24,8 +33,23 @@ export function createMarkdownDownloadName(fileName: string) {
 }
 
 export async function readMarkdownFile(file: File) {
+  // `accept` on the file input is only a hint, so size and content are
+  // validated here before anything is loaded into the editor.
+  if (file.size > MAX_MARKDOWN_FILE_BYTES) {
+    const limitInMb = MAX_MARKDOWN_FILE_BYTES / (1024 * 1024);
+    throw new MarkdownFileError(
+      `${file.name} is larger than the ${limitInMb} MB limit.`
+    );
+  }
+
+  const content = await file.text();
+
+  if (content.includes("\u0000")) {
+    throw new MarkdownFileError(`${file.name} does not look like a text file.`);
+  }
+
   return {
-    content: await file.text(),
+    content,
     fileName: normalizeMarkdownFileName(file.name)
   };
 }

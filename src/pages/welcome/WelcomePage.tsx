@@ -30,7 +30,7 @@ const featureCards = [
 
 export function WelcomePage() {
   return (
-    <main className="flex min-h-screen flex-col bg-slate-950 text-slate-100">
+    <main className="flex h-full min-h-0 flex-col overflow-y-auto bg-slate-950 text-slate-100">
       <section className="mx-auto flex w-full max-w-6xl flex-1 flex-col justify-center px-6 py-12">
         <div className="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
           <div>

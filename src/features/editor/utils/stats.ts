@@ -4,10 +4,16 @@ export function getWordCount(value: string) {
 }
 
 export function getCharacterCount(value: string) {
-  return value.length;
+  let count = 0;
+  // Iterating a string yields code points, so surrogate pairs count once.
+  for (const _character of value) {
+    count += 1;
+  }
+  return count;
 }
 
 export function getReadingTime(value: string) {
-  const minutes = Math.max(1, Math.ceil(getWordCount(value) / 220));
+  const wordCount = getWordCount(value);
+  const minutes = wordCount === 0 ? 0 : Math.max(1, Math.ceil(wordCount / 220));
   return `${minutes} min read`;
 }

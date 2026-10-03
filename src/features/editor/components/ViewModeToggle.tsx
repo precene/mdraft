@@ -1,7 +1,7 @@
 import { Eye, Columns2, Pencil } from "lucide-react";
 
 import { cn } from "#/lib/cn";
-import type { ViewMode } from "../types";
+import type { ViewMode } from "../types/editor.types";
 
 import { Button } from "#/components/ui/Button";
 
